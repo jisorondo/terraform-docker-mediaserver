@@ -1,1 +1,1 @@
-# Repo to perform tests on Docker Desktop for Mac
+## Terraform repo to deploy Full media server ecosystem
