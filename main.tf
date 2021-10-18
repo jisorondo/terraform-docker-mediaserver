@@ -9,5 +9,6 @@ terraform {
 }
 
 provider "docker" {
+  host = "ssh://root@node1:22"
 
 }
