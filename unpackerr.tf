@@ -13,7 +13,12 @@ resource "docker_container" "unpackerr" {
 
   volumes {
     container_path = "/downloads"
-    host_path      = "/Users/jsorondo/appdata/downloads"
+    host_path      = var.downloads_path
+  }
+
+  volumes {
+    container_path = "/config"
+    host_path      = var.unpackerr_config
   }
 
 }

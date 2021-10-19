@@ -61,6 +61,72 @@ variable "qbittorrentvpn_config" {
 
 }
 
+variable "vpn_user" {
+  description = "VPN user to use with qbittorrent"
+  type        = string
+  default     = "VPN_USER=$vpnuser"
+  sensitive   = true
+
+}
+
+variable "vpn_pass" {
+  description = "VPN password to use with qbittorrent"
+  type        = string
+  default     = "VPN_PASS=$vpnpassword"
+  sensitive   = true
+}
+
+## Consult https://github.com/binhex/arch-qbittorrentvpn for available providers. ex. pia
+variable "vpn_prov" {
+  description = "VPN provider to use with qbittorrent"
+  type        = string
+  default     = "VPN_PROV=$provider"
+
+}
+
+## Replace with your LAN cidr ex. 192.168.0.0/24
+variable "lan_network" {
+  description = "LAN cidr for qbittorrent local access"
+  type        = string
+  default     = "LAN_NETWORK=$cidr"
+
+}
+
+variable "radarr_config" {
+  description = "Path to config"
+  type        = string
+  default     = "/Users/jsorondo/appdata/radarr"
+
+}
+
+variable "sonarr_config" {
+  description = "Path to config"
+  type        = string
+  default     = "/Users/jsorondo/appdata/sonarr"
+
+}
+
+variable "tautulli_config" {
+  description = "Path to config"
+  type        = string
+  default     = "/Users/jsorondo/appdata/tautulli"
+
+}
+
+variable "tautulli_logs" {
+  description = "Path to tautulli logs"
+  type        = string
+  default     = "/Users/jsorondo/appdata/tautulli_logs"
+
+}
+
+variable "unpackerr_config" {
+  description = "Path to config"
+  type        = string
+  default     = "/Users/jsorondo/appdata/unpackerr"
+
+}
+
 variable "media_path" {
   description = "Path to media (movies, shows, music, etc)"
   type        = string
