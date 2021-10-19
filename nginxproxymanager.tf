@@ -11,7 +11,7 @@ resource "docker_image" "db" {
 }
 
 resource "docker_container" "nginx_proxy_manager_db" {
-  name    = "db"
+  name    = "npm-db"
   image   = docker_image.db.latest
   restart = "always"
 
@@ -22,7 +22,7 @@ resource "docker_container" "nginx_proxy_manager_db" {
   ### Path to the mysql DB. Change the host_path to match your system
   volumes {
     container_path = "/var/lib/mysql"
-    host_path      = "/Users/jsorondo/appdata/nginx/data/mysql"
+    host_path      = var.db_path
   }
 
 }
@@ -30,7 +30,7 @@ resource "docker_container" "nginx_proxy_manager_db" {
 ### Default username/password admin@example.com/changeme admin_url http://$HOST:81
 
 resource "docker_container" "nginx_proxy_manager_app" {
-  name    = "app"
+  name    = "npm-app"
   image   = docker_image.npm.latest
   restart = "always"
 
@@ -64,16 +64,14 @@ resource "docker_container" "nginx_proxy_manager_app" {
 
   env = ["DB_MYSQL_HOST=db", "DB_MYSQL_PORT=3306", "DB_MYSQL_USER=npm", "DB_MYSQL_PASSWORD=npm", "DB_MYSQL_NAME=npm"]
 
-  ## Path to where SSL certificates will be stored. Change the host_path to match your system
   volumes {
     container_path = "/etc/letsencrypt"
-    host_path      = "/Users/jsorondo/appdata/nginx/letsencrypt"
+    host_path      = var.nginx_letsencrypt
   }
 
-  ## Path to nginx config. Change the host_path to match your system
   volumes {
     container_path = "/data"
-    host_path      = "/Users/jsorondo/appdata/nginx/data"
+    host_path      = var.nginx_data
   }
 
   depends_on = [

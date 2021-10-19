@@ -91,13 +91,13 @@ resource "docker_container" "plex" {
   ## Change the host_path to match your system
   volumes {
     container_path = "/media"
-    host_path      = "/Users/jsorondo/appdata"
+    host_path      = var.media_path
   }
 
   ## Change host_path to match your system
   volumes {
     container_path = "/config"
-    host_path      = "/Users/jsorondo/appdata/plex"
+    host_path      = var.plex_config
   }
 
 }

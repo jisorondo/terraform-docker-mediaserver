@@ -18,17 +18,17 @@ resource "docker_container" "bazarr" {
 
   volumes {
     container_path = "/config"
-    host_path      = "/Users/jsorondo/appdata/bazarr"
+    host_path      = var.bazarr_config
   }
 
   volumes {
     container_path = "/Shows"
-    host_path      = "/Users/jsorondo/appdata/Shows"
+    host_path      = var.shows_path
   }
 
   volumes {
     container_path = "/Movies"
-    host_path      = "/Users/jsorondo/appdata/Movies"
+    host_path      = var.movies_path
   }
 
-}
+}    
