@@ -8,7 +8,6 @@ terraform {
   }
 }
 
-// To deploy on a remote server uncomment the host below and replace IPAddress with host IP and port if needed. 
 provider "docker" {
-     host = "unix:///var/run/docker.sock"
+  host = "unix:///var/run/docker.sock"
 }
