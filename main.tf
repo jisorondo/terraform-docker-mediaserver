@@ -9,5 +9,5 @@ terraform {
 }
 
 provider "docker" {
-  host = "tcp://$IP_ADDRESS:2376" ## This line can be removed if running directly on host running docker
+  host = "tcp://$IP_ADDRESS:2376" ## Remove this line if docker host is not remote otherwise enter the IP address. Further config might be required on [docker](https://docs.docker.com/config/daemon/).
 }
