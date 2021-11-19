@@ -24,8 +24,6 @@ Before running `terraform init` , your directory tree should match the following
 ├── radarr.tf
 ├── sonarr.tf
 ├── tautulli.tf
-├── terraform.tfstate
-├── terraform.tfstate.backup
 ├── unpackerr.tf
 └── variables.tf
 ```
