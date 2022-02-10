@@ -16,7 +16,7 @@ resource "docker_container" "organizr" {
   }
 
   volumes {
-    container_path = "config"
+    container_path = "/config"
     host_path      = var.organizr_config
   }
 }
