@@ -45,6 +45,7 @@ variable "organizr_config" {
   type        = string
   default     = "/Users/jsorondo/appdata/organizr"
 }
+
 variable "overseerr_config" {
   description = "Path to config"
   type        = string
