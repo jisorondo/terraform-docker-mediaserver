@@ -38,7 +38,7 @@ Before running `terraform init` , your directory tree should match the following
   - `cd ./terraform-docker-mediaserver`
   - `terraform init`
 
-3) Modify the `variables.tf` file to your needs. Edit `main.tf` and modify line #12 or remove it if not needed.
+3) Modify the `variables.tf` file to your needs.
   - Please see details regarding the containers and variables below.
 
 4) After modifying the `variables.tf` file verify the syntax is valid
