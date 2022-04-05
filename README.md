@@ -19,6 +19,7 @@ Before running `terraform init` , your directory tree should match the following
 ├── main.tf
 ├── nginxproxymanager.tf
 ├── organizr.tf
+├── outputs.tf
 ├── overseer.tf
 ├── plex.tf
 ├── qbittorrentvpn.tf
