@@ -6,7 +6,7 @@ resource "docker_image" "unpackerr" {
 
 resource "docker_container" "unpackerr" {
   name    = "unpackerr"
-  image   = docker_image.unpackerr.latest
+  image   = docker_image.unpackerr.image_id
   restart = "always"
 
   env = ["UMASK=002"]

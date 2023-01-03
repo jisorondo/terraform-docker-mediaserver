@@ -5,7 +5,7 @@ resource "docker_image" "organizr" {
 
 resource "docker_container" "organizr" {
   name    = "organizr"
-  image   = docker_image.organizr.latest
+  image   = docker_image.organizr.image_id
   restart = "always"
 
   ports {
