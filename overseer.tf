@@ -6,7 +6,7 @@ resource "docker_image" "overseerr" {
 
 resource "docker_container" "overseerr" {
   name    = "overseerr"
-  image   = docker_image.overseerr.latest
+  image   = docker_image.overseerr.image_id
   restart = "always"
 
   ports {

@@ -12,7 +12,7 @@ resource "docker_image" "db" {
 
 resource "docker_container" "nginx_proxy_manager_db" {
   name    = "npm-db"
-  image   = docker_image.db.latest
+  image   = docker_image.db.image_id
   restart = "always"
 
   hostname = "db"
@@ -31,7 +31,7 @@ resource "docker_container" "nginx_proxy_manager_db" {
 
 resource "docker_container" "nginx_proxy_manager_app" {
   name    = "npm-app"
-  image   = docker_image.npm.latest
+  image   = docker_image.npm.image_id
   restart = "always"
 
   ## Makes nginx aware of the db container created previously

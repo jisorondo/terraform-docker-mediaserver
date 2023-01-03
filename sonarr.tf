@@ -6,7 +6,7 @@ resource "docker_image" "sonarr" {
 
 resource "docker_container" "sonarr" {
   name    = "sonarr"
-  image   = docker_image.sonarr.latest
+  image   = docker_image.sonarr.image_id
   restart = "always"
 
   ports {

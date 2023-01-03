@@ -5,7 +5,7 @@ resource "docker_image" "qbittorrentvpn" {
 
 resource "docker_container" "qbittorrentvpn" {
   name    = "qbittorrentvpn"
-  image   = docker_image.qbittorrentvpn.latest
+  image   = docker_image.qbittorrentvpn.image_id
   restart = "always"
 
   ports {
