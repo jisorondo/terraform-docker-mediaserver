@@ -6,7 +6,7 @@ resource "docker_image" "jackett" {
 
 resource "docker_container" "jackett" {
   name    = "jackett"
-  image   = docker_image.jackett.latest
+  image   = docker_image.jackett.image_id
   restart = "always"
 
   ports {

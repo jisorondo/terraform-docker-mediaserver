@@ -6,7 +6,7 @@ resource "docker_image" "radarr" {
 
 resource "docker_container" "radarr" {
   name    = "radarr"
-  image   = docker_image.radarr.latest
+  image   = docker_image.radarr.image_id
   restart = "always"
 
   ports {

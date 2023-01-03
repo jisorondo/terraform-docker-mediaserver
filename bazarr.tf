@@ -6,7 +6,7 @@ resource "docker_image" "bazarr" {
 
 resource "docker_container" "bazarr" {
   name    = "bazarr"
-  image   = docker_image.bazarr.latest
+  image   = docker_image.bazarr.image_id
   restart = "always"
 
   ports {

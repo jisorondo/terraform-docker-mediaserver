@@ -6,7 +6,7 @@ resource "docker_image" "plex" {
 
 resource "docker_container" "plex" {
   name    = "plex"
-  image   = docker_image.plex.latest
+  image   = docker_image.plex.image_id
   restart = "always"
 
   ## Uncomment below if you have a compatible nvidia card and provide the device_uuid . Need to confirm the RUNTIME will work inside env
