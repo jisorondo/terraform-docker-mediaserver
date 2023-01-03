@@ -1,42 +1,42 @@
 variable "bazarr_config" {
   description = "Path to config"
   type        = string
-  default     = "/Users/jsorondo/appdata/bazarr"
+  default     = "/opt/appdata/bazarr"
 
 }
 
 variable "jackett_config" {
   description = "Path to config"
   type        = string
-  default     = "/Users/jsorondo/appdata/binhex-jackett"
+  default     = "/opt/appdata/binhex-jackett"
 
 }
 
 variable "jackett_data" {
   description = "Path to data"
   type        = string
-  default     = "/Users/jsorondo/appdata/jackett-data"
+  default     = "/opt/appdata/jackett-data"
 
 }
 
 variable "db_path" {
   description = "Path to mysql db"
   type        = string
-  default     = "/Users/jsorondo/appdata/nginx/data/mysql"
+  default     = "/opt/appdata/nginx/data/mysql"
 
 }
 
 variable "nginx_letsencrypt" {
   description = "Path to letsencrypt certificates and keys"
   type        = string
-  default     = "/Users/jsorondo/appdata/nginx/letsencrypt"
+  default     = "/opt/appdata/nginx/letsencrypt"
 
 }
 
 variable "nginx_data" {
   description = "Path to nginx data"
   type        = string
-  default     = "/Users/jsorondo/appdata/nginx/data"
+  default     = "/opt/appdata/nginx/data"
 
 }
 
@@ -49,21 +49,21 @@ variable "organizr_config" {
 variable "overseerr_config" {
   description = "Path to config"
   type        = string
-  default     = "/Users/jsorondo/appdata/overseerr"
+  default     = "/opt/appdata/overseerr"
 
 }
 
 variable "plex_config" {
   description = "Path to config"
   type        = string
-  default     = "/Users/jsorondo/appdata/plex"
+  default     = "/opt/appdata/plex"
 
 }
 
 variable "qbittorrentvpn_config" {
   description = "Path to config"
   type        = string
-  default     = "/Users/jsorondo/appdata/qbittorrentvpn"
+  default     = "/opt/appdata/qbittorrentvpn"
 
 }
 
@@ -101,56 +101,56 @@ variable "lan_network" {
 variable "radarr_config" {
   description = "Path to config"
   type        = string
-  default     = "/Users/jsorondo/appdata/radarr"
+  default     = "/opt/appdata/radarr"
 
 }
 
 variable "sonarr_config" {
   description = "Path to config"
   type        = string
-  default     = "/Users/jsorondo/appdata/sonarr"
+  default     = "/opt/appdata/sonarr"
 
 }
 
 variable "tautulli_config" {
   description = "Path to config"
   type        = string
-  default     = "/Users/jsorondo/appdata/tautulli"
+  default     = "/opt/appdata/tautulli"
 
 }
 
 variable "tautulli_logs" {
   description = "Path to tautulli logs"
   type        = string
-  default     = "/Users/jsorondo/appdata/tautulli_logs"
+  default     = "/opt/appdata/tautulli_logs"
 
 }
 
 variable "unpackerr_config" {
   description = "Path to config"
   type        = string
-  default     = "/Users/jsorondo/appdata/unpackerr"
+  default     = "/opt/appdata/unpackerr"
 
 }
 
 variable "media_path" {
   description = "Path to media (movies, shows, music, etc)"
   type        = string
-  default     = "/Users/jsorondo/appdata"
+  default     = "/opt/media"
 
 }
 
 variable "movies_path" {
   description = "Path to the movies folder"
   type        = string
-  default     = "/Users/jsorondo/appdata/Movies"
+  default     = "/opt/media/Movies"
 
 }
 
 variable "shows_path" {
   description = "Path to the movies folder"
   type        = string
-  default     = "/Users/jsorondo/appdata/Shows"
+  default     = "/opt/media/Shows"
 
 }
 
@@ -158,5 +158,5 @@ variable "shows_path" {
 variable "downloads_path" {
   description = "Path to the downloads folder"
   type        = string
-  default     = "/Users/jsorondo/appdata/downloads"
+  default     = "/opt/downloads"
 }
