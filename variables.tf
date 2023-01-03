@@ -94,6 +94,11 @@ variable "lan_network" {
 
 }
 
+variable "port_forward" {
+  description = "Enable/Disable Strict Port Forwarding,ex: STRICT_PORT_FORWARD=yes"
+  type = string
+}
+
 variable "radarr_config" {
   description = "Path to config"
   type        = string
