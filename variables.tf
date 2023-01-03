@@ -68,33 +68,29 @@ variable "qbittorrentvpn_config" {
 }
 
 variable "vpn_user" {
-  description = "VPN user to use with qbittorrent"
+  description = "VPN user to use with qbittorrent,ex: VPN_USER=MyVPNUser"
   type        = string
-  default     = "VPN_USER=$vpnuser"
   sensitive   = true
 
 }
 
 variable "vpn_pass" {
-  description = "VPN password to use with qbittorrent"
+  description = "VPN password to use with qbittorrent,ex: VPN_PASS=MySecureVPNPassword"
   type        = string
-  default     = "VPN_PASS=$vpnpassword"
   sensitive   = true
 }
 
 ## Consult https://github.com/binhex/arch-qbittorrentvpn for available providers. ex. pia
 variable "vpn_prov" {
-  description = "VPN provider to use with qbittorrent"
+  description = "VPN provider to use with qbittorrent,ex: VPN_PROV=pia"
   type        = string
-  default     = "VPN_PROV=$provider"
 
 }
 
 ## Replace with your LAN cidr ex. 192.168.0.0/24
 variable "lan_network" {
-  description = "LAN cidr for qbittorrent local access"
+  description = "LAN cidr for qbittorrent local access,ex: LAN_NETWORK=192.168.1.0/24"
   type        = string
-  default     = "LAN_NETWORK=$cidr"
 
 }
 
