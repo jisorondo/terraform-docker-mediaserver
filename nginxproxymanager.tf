@@ -38,7 +38,7 @@ resource "docker_container" "nginx_proxy_manager_app" {
 
   host {
     host = "db"
-    ip   = docker_container.nginx_proxy_manager_db.ipv4_address
+    ip   = docker_container.nginx_proxy_manager_db.ip_address
   }
 
   ports {
