@@ -12,7 +12,7 @@ resource "docker_container" "unpackerr" {
   env = ["UMASK=002"]
 
   volumes {
-    container_path = "/downloads"
+    container_path = "/data"
     host_path      = "${var.media_prefix}/downloads"
   }
 
