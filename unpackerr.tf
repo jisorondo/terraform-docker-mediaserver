@@ -13,12 +13,12 @@ resource "docker_container" "unpackerr" {
 
   volumes {
     container_path = "/downloads"
-    host_path      = var.downloads_path
+    host_path      = "${var.media_prefix}/downloads"
   }
 
   volumes {
     container_path = "/config"
-    host_path      = var.unpackerr_config
+    host_path      = "${var.appdata_prefix}/unpackerr"
   }
 
 }

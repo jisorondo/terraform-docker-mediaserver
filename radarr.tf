@@ -18,18 +18,18 @@ resource "docker_container" "radarr" {
 
   volumes {
     container_path = "/config"
-    host_path      = var.radarr_config
+    host_path      = "${var.appdata_prefix}/radarr"
   }
 
   ## The container_path needs to match qbittorrentvpn for the automation to work in radarr. Change the host_path to match your system
   volumes {
     container_path = "/data"
-    host_path      = var.downloads_path
+    host_path      = "${var.media_prefix}/downloads"
   }
 
   volumes {
     container_path = "/movies"
-    host_path      = var.movies_path
+    host_path      = "${var.media_prefix}/movies"
   }
 
 }

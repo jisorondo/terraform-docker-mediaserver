@@ -34,18 +34,18 @@ resource "docker_container" "qbittorrentvpn" {
   }
 
   ## Environment variables https://github.com/binhex/arch-qbittorrentvpn
-  env = ["VPN_ENABLED=yes", var.vpn_user, var.vpn_pass, var.vpn_prov, "VPN_CLIENT=wireguard", var.port_forward, "ENABLE_PRIVOXY=no", "WEBUI_PORT=8080", var.lan_network, "NAME_SERVERS=84.200.69.80,37.235.1.174,1.1.1.1,37.235.1.177,84.200.70.40,1.0.0.1", "DEBUG=false", "UMASK=000", "PUID=0", "PGID=0"]
+  env = ["VPN_ENABLED=yes", "VPN_USER=${var.vpn_user}", "VPN_PASS=${var.vpn_pass}", "VPN_PROV=${var.vpn_prov}", "VPN_CLIENT=wireguard", "STRICT_PORT_FORWARD=${var.port_forward}", "ENABLE_PRIVOXY=no", "WEBUI_PORT=8080", "LAN_NETWORK=${var.lan_network}", "NAME_SERVERS=84.200.69.80,37.235.1.174,1.1.1.1,37.235.1.177,84.200.70.40,1.0.0.1", "DEBUG=false", "UMASK=000", "PUID=0", "PGID=0"]
 
 
   volumes {
     container_path = "/config"
-    host_path      = var.qbittorrentvpn_config
+    host_path      = "${var.appdata_prefix}/qbittorrentvpn"
   }
 
   ## Path to downloads folder
   volumes {
     container_path = "/data"
-    host_path      = var.downloads_path
+    host_path      = "${var.media_prefix}/downloads"
   }
 
   volumes {

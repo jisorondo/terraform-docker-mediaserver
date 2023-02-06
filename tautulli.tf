@@ -18,12 +18,12 @@ resource "docker_container" "tautulli" {
   ## Container configuration. Change the host_path to match your system
   volumes {
     container_path = "/config"
-    host_path      = var.tautulli_config
+    host_path      = "${var.appdata_prefix}/tautulli"
   }
 
   volumes {
     container_path = "/logs"
-    host_path      = var.tautulli_logs
+    host_path      = "${var.appdata_prefix}/tautulli_logs"
   }
 
 }

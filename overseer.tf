@@ -18,6 +18,6 @@ resource "docker_container" "overseerr" {
   ## Adjust the host_path to match your system
   volumes {
     container_path = "/config"
-    host_path      = var.overseerr_config
+    host_path      = "${var.appdata_prefix}/overseerr"
   }
 }

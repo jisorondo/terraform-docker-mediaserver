@@ -20,17 +20,17 @@ resource "docker_container" "sonarr" {
 
   volumes {
     container_path = "/config"
-    host_path      = var.sonarr_config
+    host_path      = "${var.appdata_prefix}/sonarr"
   }
   ## Path to your media. Adjust to match your system
   volumes {
-    container_path = var.media_path
-    host_path      = var.media_path
+    container_path = "/shows"
+    host_path      = "${var.media_prefix}/shows"
   }
   ## Container path needs to match qbittorentvpn
   volumes {
     container_path = "/data"
-    host_path      = var.downloads_path
+    host_path      = "${var.media_prefix}/downloads"
   }
 
 }

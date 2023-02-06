@@ -22,7 +22,7 @@ resource "docker_container" "nginx_proxy_manager_db" {
   ### Path to the mysql DB. Change the host_path to match your system
   volumes {
     container_path = "/var/lib/mysql"
-    host_path      = var.db_path
+    host_path      = "${var.appdata_prefix}/nginx/data/mysql"
   }
 
 }
@@ -66,12 +66,12 @@ resource "docker_container" "nginx_proxy_manager_app" {
 
   volumes {
     container_path = "/etc/letsencrypt"
-    host_path      = var.nginx_letsencrypt
+    host_path      = "${var.appdata_prefix}/nginx/letsencrypt"
   }
 
   volumes {
     container_path = "/data"
-    host_path      = var.nginx_data
+    host_path      = "${var.appdata_prefix}/nginx/data"
   }
 
   depends_on = [

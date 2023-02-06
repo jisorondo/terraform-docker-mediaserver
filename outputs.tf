@@ -176,7 +176,7 @@ output "qbittorrentvpn_ports" {
 output "qbittorrentvpn_env" {
   description = "QbittorrentVpn Container Environment"
   value       = docker_container.qbittorrentvpn.env
-  sensitive = true
+  sensitive   = true
 }
 
 output "radarr_id" {

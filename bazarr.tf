@@ -18,17 +18,17 @@ resource "docker_container" "bazarr" {
 
   volumes {
     container_path = "/config"
-    host_path      = var.bazarr_config
+    host_path      = "${var.appdata_prefix}/bazarr"
   }
 
   volumes {
-    container_path = "/Shows"
-    host_path      = var.shows_path
+    container_path = "/shows"
+    host_path      = "${var.media_prefix}/shows"
   }
 
   volumes {
-    container_path = "/Movies"
-    host_path      = var.movies_path
+    container_path = "/movies"
+    host_path      = "${var.appdata_prefix}/movies"
   }
 
 }    

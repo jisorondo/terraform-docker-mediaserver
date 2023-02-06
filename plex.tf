@@ -91,13 +91,13 @@ resource "docker_container" "plex" {
   ## Change the host_path to match your system
   volumes {
     container_path = "/media"
-    host_path      = var.media_path
+    host_path      = var.media_prefix
   }
 
   ## Change host_path to match your system
   volumes {
     container_path = "/config"
-    host_path      = var.plex_config
+    host_path      = "${var.appdata_prefix}/plex"
   }
 
 }

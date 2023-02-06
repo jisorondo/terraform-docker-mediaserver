@@ -18,11 +18,11 @@ resource "docker_container" "jackett" {
   ## Adjust the host_path to match your system
   volumes {
     container_path = "/data"
-    host_path      = var.jackett_data
+    host_path      = "${var.appdata_prefix}/jackett_data"
   }
 
   volumes {
     container_path = "/config"
-    host_path      = var.jackett_config
+    host_path      = "${var.appdata_prefix}/binhex-jackett"
   }
 }
