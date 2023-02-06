@@ -1,10 +1,10 @@
 variable "appdata_prefix" {
-  description = "Appdata Path Prefix,ex: /mnt/media"
+  description = "Appdata Path Prefix,ex: /mnt/appdata"
   type        = string
 }
 
 variable "media_prefix" {
-  description = "Media Path Prefix, ex: /mnt/appdata"
+  description = "Media Path Prefix, ex: /mnt/media"
   type        = string
 }
 
@@ -41,4 +41,10 @@ variable "port_forward" {
 variable "tz" {
   description = "Flaresolverr Timezone, defaults to UTC"
   type        = string
+}
+
+variable "docker_host" {
+  description = "Docker Host"
+  type        = string
+  default     = "unix:///var/run/docker.sock"
 }

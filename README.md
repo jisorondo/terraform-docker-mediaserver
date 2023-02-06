@@ -86,3 +86,4 @@ Before running `terraform init` , your directory tree should match the following
 
 * `var.appdata_prefix` - Path to Docker containers static configuration.
 * `var.media_prefix` - Path to the media folder on the host.
+* `var.docker_host` - Docker host string, defaults to `unix:///var/run/docker.sock` refer to provider docs https://registry.terraform.io/providers/kreuzwerker/docker/2.25.0/docs#remote-hosts
