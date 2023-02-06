@@ -13,8 +13,10 @@ You will need [terraform](https://www.terraform.io/downloads.html) installed and
 Before running `terraform init` , your directory tree should match the following:
 
 ```
+├── LICENSE
 ├── README.md
 ├── bazarr.tf
+├── flaresolverr.tf
 ├── jackett.tf
 ├── main.tf
 ├── nginxproxymanager.tf
