@@ -28,7 +28,7 @@ resource "docker_container" "bazarr" {
 
   volumes {
     container_path = "/movies"
-    host_path      = "${var.appdata_prefix}/movies"
+    host_path      = "${var.media_prefix}/movies"
   }
 
 }    
